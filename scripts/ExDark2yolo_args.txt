@@ -1,0 +1,5 @@
+--anndir /home/fyh/data/ExDark/Annnotations
+--imgdir /home/fyh/data/ExDark/Images
+--ratio 8:1:1
+--version 11
+--output_dir /home/fyh/data/ExDark
