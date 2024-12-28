@@ -1,0 +1,5 @@
+--visible_gpus 0
+--model yolo11n
+--data ./configs/ExDarkFinetune.yaml
+--epoch 10
+--name test
