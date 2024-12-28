@@ -1,0 +1,8 @@
+--use_gpu
+--model yolo11n
+--data ./configs/ExDarkFinetune.yaml
+--ckpt /home/fyh/gitsrc/ML-g9/runs/test3/weights/best.pt
+--batch 8
+--img_size 640
+--name val
+--save_json

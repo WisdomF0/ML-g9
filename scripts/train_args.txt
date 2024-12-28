@@ -2,4 +2,4 @@
 --model yolo11n
 --data ./configs/ExDarkFinetune.yaml
 --epoch 10
---name test
+--name train
