@@ -37,4 +37,8 @@ python ExDark2yolo.py ./scripts/ExDark2yolo_args.txt
 ```
 python train.py ./scipts/<训练参数配置文件名>.txt
 ```
-
+## 评估
+使用与训练相同的数据集配置文件`.yaml`，修改评估参数配置文件`.txt`文件保存在`./scripts`文件夹下，然后就可以开始进行训练评估：
+```
+python val.py ./scipts/<评估参数配置文件名>.txt
+```
