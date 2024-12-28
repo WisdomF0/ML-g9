@@ -29,6 +29,7 @@ YOLO标注的内容则是：<br>
 ```
 python ExDark2yolo.py ./scripts/ExDark2yolo_args.txt
 ```
-可以在`./scripts/ExDark2yolo_args.txt`修改参数运行或者直接输入参数
+可以在`./scripts/ExDark2yolo_args.txt`修改参数运行或者直接输入参数<br>
+格式转换后的图像文件可能有icc的格式问题，使用`fixRGBs.py`进行修复
 
 
