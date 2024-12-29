@@ -21,16 +21,17 @@ Boat 255 234 133 93 0 0 0 0 0 0 0
 
 YOLO标注的内容则是：<br>
 ```
-<object-class> <x_center> <y_center> <width> <height>
+<类别序号> <归一化的中心点x坐标> <归一化的中心点y坐标> <归一化的bbox宽度> <归一化的bbox高度>
 ```
 
 所以需要进行格式的转换<br>
-仓库中提供了格式转换的脚本`ExDark2yolo.py`，使用方法：<br>
+仓库中提供了格式转换的脚本`./tools/ExDark2yolo.py`，使用方法：<br>
 ```
-python ExDark2yolo.py ./scripts/ExDark2yolo_args.txt
+python ./tools/ExDark2yolo.py ./scripts/ExDark2yolo_args.txt
 ```
 可以在`./scripts/ExDark2yolo_args.txt`修改参数运行或者直接输入参数<br>
-格式转换后的图像文件可能有icc的格式问题，使用`fixRGBs.py`进行修复
+格式转换后的图像文件可能有icc的格式问题，使用`./tools/fixRGBs.py`进行修复<br>
+`./tools/check.py`用来检查自制数据集
 
 ## 训练
 制作数据集配置文件`.yaml`保存在`./configs`文件夹下，训练参数配置文件`.txt`文件保存在`./scripts`文件夹下，配置好这两个文件后就可以开始训练：
