@@ -30,7 +30,7 @@ YOLO标注的内容则是：<br>
 python ./tools/ExDark2yolo.py ./scripts/ExDark2yolo_args.txt
 ```
 可以在`./scripts/ExDark2yolo_args.txt`修改参数运行或者直接输入参数<br>
-格式转换后的图像文件可能有icc的格式问题，使用`./tools/fixRGBs.py`进行修复<br>
+格式转换后的图像文件可能有icc的格式问题，使用`./tools/fixRGBs.py`进行修复(不修复也不影响训练，就是会有warning比较烦人)<br>
 `./tools/check.py`用来检查自制数据集
 
 ## 训练
