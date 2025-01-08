@@ -1,8 +1,18 @@
 # 机器学习课程设计——第九小组
+Gitee项目：https://gitee.com/wisdomfyh/ML-g9
+Github项目：https://github.com/WisdomF0/ML-g9
 ## 成员
+|姓名|账号|分工|
+|-----|-----|-----|
+|冯耀辉|wisdomfyh (iam220360417fyh@163.com)|Step1|
+|吕叶祥子|youmengxiandexianyu|Step2|
+|赵雅茜|Zhao-yaqian1 (zhaoyaqian997797@163.com)|Step3|
+|梅姝文|msw377 (13194104+msw377@user.noreply.gitee.com)|Step4|
+|徐齐|xq18226065898 (3578804636@qq.com)|Step2|
+|祝龙沛|zhulp1 (15334963+zhulp1@user.noreply.gitee.com)|报告书写|
 
 ## 环境搭建
-选择使用`YOLO11`官方的[Ultralytics](https://github.com/ultralytics/ultralytics/tree/main)仓库作为基础框架<br><br>
+选择使用`YOLO11`官方的[Ultralytics](https://github.com/ultralytics/ultralytics/tree/main)仓库作为基础框架<br>
 新建环境（选择python 3.9）
 ```
 conda create -n yolo11 python==3.9
@@ -23,7 +33,16 @@ YOLO标注的内容则是：<br>
 ```
 <类别序号> <归一化的中心点x坐标> <归一化的中心点y坐标> <归一化的bbox宽度> <归一化的bbox高度>
 ```
-
+Yolo的数据集的组织格式为：
+```
+dataset/
+├── train/
+│   ├── images/
+│   └── labels/
+└── val/
+    ├── images/
+    └── labels/
+```
 所以需要进行格式的转换<br>
 仓库中提供了格式转换的脚本`./tools/ExDark2yolo.py`，使用方法：<br>
 ```
@@ -31,7 +50,7 @@ python ./tools/ExDark2yolo.py ./scripts/ExDark2yolo_args.txt
 ```
 可以在`./scripts/ExDark2yolo_args.txt`修改参数运行或者直接输入参数<br>
 格式转换后的图像文件可能有icc的格式问题，使用`./tools/fixRGBs.py`进行修复(不修复也不影响训练，就是会有warning比较烦人)<br>
-`./tools/check.py`用来检查自制数据集
+`./tools/check.py`用来检查自制数据集<br>
 
 ## 训练
 制作数据集配置文件`.yaml`保存在`./configs`文件夹下，训练参数配置文件`.txt`文件保存在`./scripts`文件夹下，配置好这两个文件后就可以开始训练：
