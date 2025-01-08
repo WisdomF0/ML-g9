@@ -9,7 +9,7 @@ Github项目：https://github.com/WisdomF0/ML-g9
 |赵雅茜|Zhao-yaqian1 (zhaoyaqian997797@163.com)|Step3|
 |梅姝文|msw377 (13194104+msw377@user.noreply.gitee.com)|Step4|
 |徐齐|xq18226065898 (3578804636@qq.com)|Step2|
-|祝龙沛|zhulp1 (15334963+zhulp1@user.noreply.gitee.com)|报告书写|
+|祝隆沛|zhulp1 (15334963+zhulp1@user.noreply.gitee.com)|报告书写|
 
 ## 环境搭建
 选择使用`YOLO11`官方的[Ultralytics](https://github.com/ultralytics/ultralytics/tree/main)仓库作为基础框架<br>
